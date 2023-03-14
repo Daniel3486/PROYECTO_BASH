@@ -60,6 +60,9 @@ then
         		                seccion="Modelo V"
 					archivo="Modelo_V.inf"
 	                	        ;;
+				*)
+					echo "Opción inválida"
+					;;
 	                	esac
         		done
 		fi
@@ -83,13 +86,44 @@ then
         	                echo -e "\nConcepto agregado exitosamente.\n"
                 	        ;;
 			2)
-				:
+				if [[ -e $archivo ]]
+				then
+					read -p "Concepto a buscar: " Concepto
+					ConceptoBuscado=$(grep "^\[$Concepto\]" "$archivo")
+					if [[ -n "$ConceptoBuscado" ]]
+					then
+						echo -e "\n$ConceptoBuscado\n"
+					else
+						echo -e "\nConcepto no encontrado\n"
+					fi
+				else
+					echo -e "El archivo no existe\n"
+				fi
 				;;
 			3)
-				:
+				if [[ -e $archivo ]]
+				then
+					read -p "Concepto a eliminar: " ConceptoAEliminar
+
+					if grep "^\[$ConceptoAEliminar\]" "$archivo"
+					then
+						sed -i "/^\[$ConceptoAEliminar\]/d" "$archivo"
+						echo -e "\nConcepto eliminado\n"
+					else
+						echo -e "\nConcepto no encontrado\n"
+					fi
+				else
+					echo -e "El archivo no existe\n"
+				fi
 				;;
 			4)
-				:
+				if [[ -e $archivo ]]
+				then 
+					cat "$archivo"
+					echo ""
+				else
+					echo -e "El archivo no existe\n"
+				fi
 				;;
 			5)
 				:
