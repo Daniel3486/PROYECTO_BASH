@@ -58,12 +58,12 @@ Proyecto del primer parcial Como proyecto del primer parcial vamos a realizar un
 
 10. Suba a GitHub, gitlab y bitbucket su proyecto, el repositorio deberá contener un archivo readme.md con la plantilla de proyectos vista en la tarea de clase y deberá contener los nombres de cada integrante del equipo, adicionalmente suba la imagen a dockerhub.
 
-##Integrantes 
+## Integrantes 
 -Daniel Josue Lozano Porras (348603) 
 -Zaid Joel González Mendoza (353254) 
 -Axel Ricardo Moncloa Muro (348752)
 
-##Links 
+## Links 
 [GITHUB](https://github.com/Daniel3486/PROYECTO_BASH)
 [GITLAB](https://gitlab.com/a2912606/proyecto_bash)
 [BITBUCKET](https://bitbucket.org/prueba14/proyecto_bash/src/master/)
